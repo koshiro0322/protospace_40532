@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-   adapter: mysql2
+  adapter: mysql2
   username: root
   password:
   host: localhost
@@ -30,7 +30,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-   adapter: mysql2
+  adapter: mysql2
   username: root
   password:
   host: localhost
@@ -60,6 +60,4 @@ production:
   <<: *default
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
-  database: protospace_40532_production
-  username: protospace_40532
-  password: <%= ENV["PROTOSPACE_40532_DATABASE_PASSWORD"] %>
+  
