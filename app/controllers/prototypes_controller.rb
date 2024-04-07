@@ -13,7 +13,8 @@ class PrototypesController < ApplicationController
 
     if Prototype.create(prototype_params)
     redirect_to root_path
-    else render :new
+    else
+      render :new
     end
   end
   def show
